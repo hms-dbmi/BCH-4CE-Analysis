@@ -23,7 +23,7 @@ sudo chmod -R 777 /opt/4ceData/Phase1
 
 for encrypted_file in *.csv-encrypted; do
   echo ${encrypted_file}
-  aws-encryption-cli --decrypt --input $encrypted_file --encryption-context purpose=test --metadata-output /opt/temp/${encrypted_file}_metadata --output $encrypted_file.unencrypted --discovery true
+  aws-encryption-cli --decrypt --input $encrypted_file --encryption-context purpose=test --metadata-output /opt/temp/${encrypted_file}_metadata --output $encrypted_file.decrypted --discovery true
 done
 
 sudo chmod -R 777 /opt/4ceData/Phase1
@@ -35,7 +35,7 @@ sudo chmod -R 777 /opt/4ceData/Phase2
 
 for encrypted_file in *.csv-encrypted; do
   echo ${encrypted_file}
-  aws-encryption-cli --decrypt --input $encrypted_file --encryption-context purpose=test --metadata-output /opt/temp/${encrypted_file}_metadata --output $encrypted_file.unencrypted --discovery true
+  aws-encryption-cli --decrypt --input $encrypted_file --encryption-context purpose=test --metadata-output /opt/temp/${encrypted_file}_metadata --output $encrypted_file.decrypted --discovery true
 done
 
 sudo chmod -R 777 /opt/4ceData/Phase2
