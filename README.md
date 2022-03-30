@@ -18,7 +18,7 @@ Run the script ./pull-4ce-data.sh <S3_PATH>
 
 ## Access the UI
 Grab the ip address.<br/>
-Run this comannad on your local... <br/>
+Run this command on your local... <br/>
 sudo sft  ssh -L 8788:localhost:8788  <IP_ADDRESS> <br/>
 
 Open the browser:<br/>
